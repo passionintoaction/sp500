@@ -11,7 +11,7 @@ from altair import *
 
 def load_model_templates():
     template_dict = collections.defaultdict(dict)
-    template_dirs = [f for f in os.scandir("../UI_templates") if f.is_dir()]
+    template_dirs = [f for f in os.scandir("./UI_templates") if f.is_dir()]
     template_dirs = sorted(template_dirs, key=lambda e: e.name)
     
     for template_dir in template_dirs:
