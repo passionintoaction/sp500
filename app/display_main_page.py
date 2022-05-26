@@ -1,8 +1,8 @@
 ########### Google Anlaytics 
-import pathlib
-from bs4 import BeautifulSoup
-import logging
-import shutil
+# import pathlib
+# from bs4 import BeautifulSoup
+# import logging
+# import shutil
 
 # def inject_ga():
 #     GA_ID = "google_analytics"
