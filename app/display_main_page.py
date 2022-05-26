@@ -58,7 +58,7 @@ import datetime
 # code_path = '/Users/jeeyounglee/Desktop/python/class101/streamlit/v1'
 
 # Read the basic information from dictionary
-with open('../dictionaries/master_dict.json') as json_file:
+with open('./dictionaries/master_dict.json') as json_file:
     master_dict = json.load(json_file)
     
 # path = "/Users/jeeyounglee/Desktop/python/class101/streamlit/v1_sp500/data/"
@@ -71,7 +71,7 @@ def newest(path):
     paths = [os.path.join(path, basename) for basename in files]
     return max(paths, key=os.path.getctime)
 
-date_path = "../data/"
+date_path = "./data/"
 new_path = newest(date_path)
 latest_date = new_path.split('_')[-1].split('.')[0]
 
@@ -80,7 +80,7 @@ if latest_date != today:
     today_st = latest_date[:4] + '-' + latest_date[4:6] + '-' + latest_date[6:]
     st.error(f"Note that the current file date: {latest_date}")
 
-df_final = pd.read_csv(f"../data/df_forcasting_{today}.csv", sep='\t')
+df_final = pd.read_csv(f"./data/df_forcasting_{today}.csv", sep='\t')
 with open(f'../data/stock_history_{today}.pickle', 'rb') as handle:
     stock_history = pickle.load(handle) 
     
