@@ -2,7 +2,7 @@ import streamlit as st
 import json 
 
 # Read the basic information from dictionary
-with open('../dictionaries/master_dict.json') as json_file:
+with open('./dictionaries/master_dict.json') as json_file:
     master_dict = json.load(json_file)
     
 def show():
