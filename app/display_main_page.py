@@ -81,7 +81,7 @@ if latest_date != today:
     st.error(f"Note that the current file date: {latest_date}")
 
 df_final = pd.read_csv(f"./data/df_forcasting_{today}.csv", sep='\t')
-with open(f'../data/stock_history_{today}.pickle', 'rb') as handle:
+with open(f'./data/stock_history_{today}.pickle', 'rb') as handle:
     stock_history = pickle.load(handle) 
     
 # Read CSS 
@@ -409,7 +409,7 @@ def show(result, model, task, input_dict):
             left_info_col, right_info_col = st.columns([1, 2])
             
             left_info_col.write('')
-            main_image = Image.open(f'../images/main_stock.png')
+            main_image = Image.open(f'./images/main_stock.png')
             left_info_col.image(main_image, width=220)
             left_info_col.write('')
             
