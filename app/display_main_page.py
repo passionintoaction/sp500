@@ -55,13 +55,17 @@ import altair as alt
 import os
 import datetime
 
-# code_path = '/Users/jeeyounglee/Desktop/python/class101/streamlit/v1'
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 # Read the basic information from dictionary
 with open('./dictionaries/master_dict.json') as json_file:
     master_dict = json.load(json_file)
     
-# path = "/Users/jeeyounglee/Desktop/python/class101/streamlit/v1_sp500/data/"
 today = datetime.datetime.now().strftime('%Y%m%d')
 today_st = datetime.datetime.now().strftime('%m-%d-%Y')
 
