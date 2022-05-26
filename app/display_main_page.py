@@ -312,6 +312,64 @@ def show(result, model, task, input_dict):
                 with col2: 
                     st.markdown("<h2 style='text-align: center; color: red;'>Oops!! No data found. Try different inputs. </h2>", unsafe_allow_html=True)
 
+###################################################################### HOME   
+######################################################################
+        elif model == "Home":
+            st.markdown("<h1 style='text-align: center; color: black;'>Find the Right Ticker for You!</h1>", unsafe_allow_html=True)
+            
+            left_info_col, right_info_col = st.columns([1, 2])
+            
+            left_info_col.write('')
+            main_image = Image.open(f'./images/main_stock.png')
+            left_info_col.image(main_image, width=220)
+            left_info_col.write('')
+            
+            right_info_col.markdown("""
+            
+            Welcome! This site is an example of an app implementation of the data analysis, forecasting, and an automated pipeline introduced in the [Class101 Data Science Practical Project lecture](https://class101.net/products/l4O941573GhUs5qxKhIc). The data analysis and forecasting models displayed here are not optimized for investment purposes. Therefore, this website is not responsible for any investment decisions.""")
+            
+            intro_ko = '<p style="font-family:Courier; color:gray; font-size: 13px;">안녕하세요. 이 사이트는 [클래스101 데이터 과학 실무 프로젝트] 강의에서 소개된 데이터 분석, 예측모델 및 데이터 파이프라인의 앱 구현 사례입니다. 여기에 표시된 데이터 분석 및 예측 모델은 투자 목적으로 최적화되지 않았으며, 개인 투자에 대해 책임을 지지 않습니다.</p>'
+            right_info_col.markdown(intro_ko, unsafe_allow_html=True)
+
+            st.markdown("---")
+            st.markdown("""
+            ### Creating monetization - Ad""")
+            
+#             HtmlFile = open(f'{code_path}/modules/adsense.html', 'r', encoding='utf-8')
+#             source_code = HtmlFile.read()
+#             components.html(source_code, height=600)
+
+#             st.markdown(
+#                 """
+#                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5073055552400117"
+#      crossorigin="anonymous"></script>
+# <!-- streamlit_ad -->
+# <ins class="adsbygoogle"
+#      style="display:block"
+#      data-ad-client="ca-pub-5073055552400117"
+#      data-ad-slot="3052417980"
+#      data-ad-format="auto"
+#      data-full-width-responsive="true"></ins>
+# <script>
+#      (adsbygoogle = window.adsbygoogle || []).push({});
+# </script>
+#                 """,
+#                 unsafe_allow_html=True)
+            
+            st.markdown("---")
+            st.markdown("""
+            ### Usage
+            In the left menu SP&P500, you can find the right ticker for you, depending on your **investment budget**, **sector of interest**, and **risk level** you can take on. Along with the corresponding ticker, the forecasted stock price calculated by the time series ARIMA model is also provided.""") 
+           
+            usage_ko = '<p style="font-family:Courier; color:gray; font-size: 13px;">왼쪽 메뉴 SP&P500에서, <투자 예산>, <관심 섹터>, <본인 투자 위험도>를 입력하면 SP&500 티커 중 여기에 해당되는 티커와 함께 시계열 ARIMA 모델로 계산된 예상 주가도 같이 제공합니다. 데이터 분석, 예측 모델, 클라우드 서비스 자동화 과정이 강의에 제공되어 있으므로 코드는 따로 공개하지 않습니다. </p>'
+            st.markdown(usage_ko, unsafe_allow_html=True) 
+
+            st.markdown("---")
+            st.markdown("""Developed and Maintained by Jeeyoung Lee: Data Scientist & Autor """)
+            st.markdown("[[클래스101] 데이터 과학 실무 프로젝트](https://class101.net/products/l4O941573GhUs5qxKhIc)")
+            st.markdown("""You are always welcome to e-mail: <a href="mailto:statnmath.datascience@gmail.com>"> statnmath.datascience@gmail.com</a>""" , unsafe_allow_html=True)
+            st.markdown("""Copyright (c) 2022 Jeeyoung Lee""")              
+            
 ###################################################################### S&P500
         elif model == "S&P500":
             if len(input_dict['sector']) == 0: 
@@ -404,64 +462,6 @@ def show(result, model, task, input_dict):
             else:
                 st.markdown("There are no tickets that have went down in close price for a given period of time.")
                 
-            
-###################################################################### HOME   
-######################################################################
-        elif model == "Home":
-            st.markdown("<h1 style='text-align: center; color: black;'>Find the Right Ticker for You!</h1>", unsafe_allow_html=True)
-            
-            left_info_col, right_info_col = st.columns([1, 2])
-            
-            left_info_col.write('')
-            main_image = Image.open(f'./images/main_stock.png')
-            left_info_col.image(main_image, width=220)
-            left_info_col.write('')
-            
-            right_info_col.markdown("""
-            
-            Welcome! This site is an example of an app implementation of the data analysis, forecasting, and an automated pipeline introduced in the [Class101 Data Science Practical Project lecture](https://class101.net/products/l4O941573GhUs5qxKhIc). The data analysis and forecasting models displayed here are not optimized for investment purposes. Therefore, this website is not responsible for any investment decisions.""")
-            
-            intro_ko = '<p style="font-family:Courier; color:gray; font-size: 13px;">안녕하세요. 이 사이트는 [클래스101 데이터 과학 실무 프로젝트] 강의에서 소개된 데이터 분석, 예측모델 및 데이터 파이프라인의 앱 구현 사례입니다. 여기에 표시된 데이터 분석 및 예측 모델은 투자 목적으로 최적화되지 않았으며, 개인 투자에 대해 책임을 지지 않습니다.</p>'
-            right_info_col.markdown(intro_ko, unsafe_allow_html=True)
-
-            st.markdown("---")
-            st.markdown("""
-            ### Creating monetization - Ad""")
-            
-#             HtmlFile = open(f'{code_path}/modules/adsense.html', 'r', encoding='utf-8')
-#             source_code = HtmlFile.read()
-#             components.html(source_code, height=600)
-
-#             st.markdown(
-#                 """
-#                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5073055552400117"
-#      crossorigin="anonymous"></script>
-# <!-- streamlit_ad -->
-# <ins class="adsbygoogle"
-#      style="display:block"
-#      data-ad-client="ca-pub-5073055552400117"
-#      data-ad-slot="3052417980"
-#      data-ad-format="auto"
-#      data-full-width-responsive="true"></ins>
-# <script>
-#      (adsbygoogle = window.adsbygoogle || []).push({});
-# </script>
-#                 """,
-#                 unsafe_allow_html=True)
-            
-            st.markdown("---")
-            st.markdown("""
-            ### Usage
-            In the left menu SP&P500, you can find the right ticker for you, depending on your **investment budget**, **sector of interest**, and **risk level** you can take on. Along with the corresponding ticker, the forecasted stock price calculated by the time series ARIMA model is also provided.""") 
-           
-            usage_ko = '<p style="font-family:Courier; color:gray; font-size: 13px;">왼쪽 메뉴 SP&P500에서, <투자 예산>, <관심 섹터>, <본인 투자 위험도>를 입력하면 SP&500 티커 중 여기에 해당되는 티커와 함께 시계열 ARIMA 모델로 계산된 예상 주가도 같이 제공합니다. 데이터 분석, 예측 모델, 클라우드 서비스 자동화 과정이 강의에 제공되어 있으므로 코드는 따로 공개하지 않습니다. </p>'
-            st.markdown(usage_ko, unsafe_allow_html=True) 
-
-            st.markdown("---")
-            st.markdown("""Developed and Maintained by Jeeyoung Lee: Data Scientist & Autor """)
-            st.markdown("[[클래스101] 데이터 과학 실무 프로젝트](https://class101.net/products/l4O941573GhUs5qxKhIc)")
-            st.markdown("""You are always welcome to e-mail: <a href="mailto:statnmath.datascience@gmail.com>"> statnmath.datascience@gmail.com</a>""" , unsafe_allow_html=True)
-            st.markdown("""Copyright (c) 2022 Jeeyoung Lee""")
             
     
 if __name__ == "__main__":
