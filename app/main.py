@@ -14,7 +14,7 @@ with open('./dictionaries/master_dict.json') as json_files:
     
     
 # Load main page template
-template_main_page = utils.import_from_file("template_main", "display_main_page.py")
+template_main_page = utils.import_from_file("template_main", "./app/display_main_page.py")
 # Load model templates
 template_dict = utils.load_model_templates()
     
