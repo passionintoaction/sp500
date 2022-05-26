@@ -9,7 +9,7 @@ import utils
 import api
 
 # Read the basic information from dictionary
-with open('../dictionaries/master_dict.json') as json_files:
+with open('./dictionaries/master_dict.json') as json_files:
     master_dict = json.load(json_files)
     
     
@@ -20,7 +20,7 @@ template_dict = utils.load_model_templates()
     
 with st.sidebar:
     #st.write("## Menu")
-    template_dict["Home"] = '../UI_templates/Home/'
+    template_dict["Home"] = './UI_templates/Home/'
     model = st.selectbox("MENU", list(template_dict.keys()), index=1)
     
     if isinstance(template_dict[model], dict):
