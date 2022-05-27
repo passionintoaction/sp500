@@ -335,9 +335,9 @@ def show(result, model, task, input_dict):
             st.markdown("""
             ### Creating monetization - Ad""")
             
-            HtmlFile = open('./modules/adsense.html', 'r', encoding='utf-8')
-            source_code = HtmlFile.read()
-            components.html(source_code, height=600)
+#             HtmlFile = open('./modules/adsense.html', 'r', encoding='utf-8')
+#             source_code = HtmlFile.read()
+#             components.html(source_code, height=600)
 
 #             st.markdown(
 #                 """
