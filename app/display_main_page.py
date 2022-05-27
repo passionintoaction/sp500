@@ -82,7 +82,7 @@ latest_date = new_path.split('_')[-1].split('.')[0]
 if latest_date != today:
     today = latest_date
     today_st = latest_date[:4] + '-' + latest_date[4:6] + '-' + latest_date[6:]
-    st.error(f"Note that the current file date: {latest_date}")
+#     st.error(f"Note that the current file date: {latest_date}")
 
 df_final = pd.read_csv(f"./data/df_forcasting_{today}.csv", sep='\t')
 with open(f'./data/stock_history_{today}.pickle', 'rb') as handle:
@@ -335,9 +335,9 @@ def show(result, model, task, input_dict):
             st.markdown("""
             ### Creating monetization - Ad""")
             
-#             HtmlFile = open(f'{code_path}/modules/adsense.html', 'r', encoding='utf-8')
-#             source_code = HtmlFile.read()
-#             components.html(source_code, height=600)
+            HtmlFile = open('./modules/adsense.html', 'r', encoding='utf-8')
+            source_code = HtmlFile.read()
+            components.html(source_code, height=600)
 
 #             st.markdown(
 #                 """
