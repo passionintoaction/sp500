@@ -19,7 +19,6 @@ template_main_page = utils.import_from_file("template_main", "./app/display_main
 template_dict = utils.load_model_templates()
     
 with st.sidebar:
-    #st.write("## Menu")
     template_dict["Home"] = './UI_templates/Home/'
     model = st.selectbox("MENU", list(template_dict.keys()), index=1)
     

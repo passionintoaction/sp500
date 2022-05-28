@@ -6,7 +6,7 @@ import numpy as np
 
 
 def call_api(input_dict, model, task):
-    if model == 'sp500':
+    if model == 'Home':
         res=run_sp500(input_dict)
         
         return res
