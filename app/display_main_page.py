@@ -39,6 +39,7 @@
 #######################################################
 ####################################################### display_main_page.py
 import streamlit as st
+import streamlit.components.v1 as components
 import json
 import folium
 from streamlit_folium import folium_static
